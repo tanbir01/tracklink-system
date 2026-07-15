@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">TrackLink</string>
+    <string name="title_activity_main">TrackLink Monitor</string>
+    <string name="title_activity_login">Sign In</string>
+    <string name="title_activity_settings">Configuration</string>
+    
+    <string name="btn_start_tracking">Start Telemetry Tracking</string>
+    <string name="btn_stop_tracking">Stop Telemetry Tracking</string>
+    <string name="btn_login">Sign In</string>
+    <string name="btn_save">Save Configuration</string>
+    <string name="btn_sync_now">Sync Cached Logs</string>
+    
+    <string name="prompt_email">Email or Username</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_server_url">Server Gateway URL</string>
+    <string name="prompt_device_id">Unique Device ID (string)</string>
+    <string name="prompt_update_interval">GPS Telemetry Interval</string>
+    
+    <string name="status_tracking_active">BACKGROUND TELEMETRY ACTIVE</string>
+    <string name="status_tracking_inactive">TELEMETRY INACTIVE</string>
+    <string name="status_connected">WSS Gateway Connected</string>
+    <string name="status_disconnected">WSS Gateway Disconnected</string>
+    
+    <string name="permission_rationale">This application requires location access in the background to report your device coordinate history to your secure dashboard panel.</string>
+</resources>

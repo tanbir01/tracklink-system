@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/background_light">
+
+    <!-- Header bar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TrackLink Monitor"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary_light"/>
+        <ImageButton
+            android:id="@+id/btn_settings"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@android:drawable/ic_menu_preferences"
+            android:contentDescription="Settings"/>
+    </RelativeLayout>
+
+    <!-- Telemetry status card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="@color/card_light"
+        android:elevation="2dp"
+        android:layout_marginBottom="24dp">
+        <TextView
+            android:id="@+id/tv_tracking_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TRACKING TELEMETRY INACTIVE"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/error"
+            android:layout_marginBottom="8dp"/>
+        <TextView
+            android:id="@+id/tv_connection_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WebSocket: Disconnected"
+            android:textSize="12sp"
+            android:textColor="@color/text_secondary_light"/>
+    </LinearLayout>
+
+    <!-- Details Card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="@color/card_light"
+        android:elevation="2dp"
+        android:layout_marginBottom="24dp">
+        
+        <TextView
+            android:id="@+id/tv_device_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Device ID: N/A"
+            android:textSize="12sp"
+            android:textColor="@color/text_primary_light"
+            android:layout_marginBottom="8dp"/>
+        
+        <TextView
+            android:id="@+id/tv_unsynced_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Unsynced locations cached: 0"
+            android:textSize="12sp"
+            android:textColor="@color/text_primary_light"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tv_latest_gps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Latest Coords: Not recorded"
+            android:textSize="12sp"
+            android:textColor="@color/text_primary_light"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_toggle_tracking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Telemetry Tracking"
+        android:padding="16dp"
+        android:backgroundTint="@color/primary"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btn_sync_now"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sync Cached Logs"
+        android:padding="16dp"
+        android:backgroundTint="@color/accent"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"/>
+
+</LinearLayout>
