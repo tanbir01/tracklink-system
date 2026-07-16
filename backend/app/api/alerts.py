@@ -47,7 +47,7 @@ async def list_alerts(
 
 @router.patch(
     "/read",
-    status_code=status.HTTP_204_NO_CONTENT,
+    status_code=status.HTTP_200_OK,
     summary="Mark alerts as read",
 )
 async def mark_alerts_read(
@@ -61,7 +61,7 @@ async def mark_alerts_read(
 
 @router.patch(
     "/read-all",
-    status_code=status.HTTP_204_NO_CONTENT,
+    status_code=status.HTTP_200_OK,
     summary="Mark all alerts as read",
 )
 async def mark_all_read(
@@ -74,7 +74,7 @@ async def mark_all_read(
 
 @router.delete(
     "/{alert_id}",
-    status_code=status.HTTP_204_NO_CONTENT,
+    status_code=status.HTTP_200_OK,
     summary="Delete an alert",
 )
 async def delete_alert(
@@ -88,7 +88,7 @@ async def delete_alert(
 
 @router.delete(
     "",
-    status_code=status.HTTP_204_NO_CONTENT,
+    status_code=status.HTTP_200_OK,
     summary="Delete all read alerts",
 )
 async def delete_read_alerts(

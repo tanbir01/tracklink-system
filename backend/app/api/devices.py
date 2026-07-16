@@ -82,7 +82,7 @@ async def update_device(
 
 @router.delete(
     "/{device_uuid}",
-    status_code=status.HTTP_204_NO_CONTENT,
+    status_code=status.HTTP_200_OK,
     summary="Delete a device",
 )
 async def delete_device(
