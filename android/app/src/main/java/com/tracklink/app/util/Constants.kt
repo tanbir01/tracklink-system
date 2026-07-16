@@ -1,8 +1,8 @@
 package com.tracklink.app.util
 
 object Constants {
-    const val DEFAULT_API_URL = "http://10.0.2.2:8000/api/" // Android Emulator loopback
-    const val DEFAULT_WS_URL = "ws://10.0.2.2:8000/ws"
+    const val DEFAULT_API_URL = "https://tracklink-system.onrender.com/api/" // Production Cloud Backend
+    const val DEFAULT_WS_URL = "wss://tracklink-system.onrender.com/ws"
 
     // Preference Keys
     const val PREF_KEY_SERVER_URL = "server_url"
