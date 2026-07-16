@@ -81,21 +81,22 @@ async def refresh_token(
 
 @router.post(
     "/logout",
-    status_code=status.HTTP_204_NO_CONTENT,
+    status_code=status.HTTP_200_OK,
     summary="Logout and revoke refresh token",
 )
 async def logout(
     body: TokenRefresh,
     db: DbSession,
     current_user: CurrentUser,
-) -> None:
+) -> dict:
     service = AuthService(db)
     await service.logout(body.refresh_token, current_user.id)
+    return {"detail": "Logged out successfully"}
 
 
 @router.post(
     "/change-password",
-    status_code=status.HTTP_204_NO_CONTENT,
+    status_code=status.HTTP_200_OK,
     summary="Change current user's password",
 )
 async def change_password(
@@ -103,7 +104,7 @@ async def change_password(
     request: Request,
     db: DbSession,
     current_user: CurrentUser,
-) -> None:
+) -> dict:
     service = AuthService(db)
     await service.change_password(
         current_user,
@@ -111,6 +112,7 @@ async def change_password(
         body.new_password,
         ip_address=request.client.host if request.client else None,
     )
+    return {"detail": "Password changed successfully"}
 
 
 @router.get(
